@@ -6,31 +6,15 @@
     <body>
         <script>
             //javascript
-            function retornaSexo(sexo){
-                if(sexo === 'M'){
-                    return 'Masculino';
-                }
-                else if (sexo === 'F') {
-                    return 'Feminino';
-                } else{
-                    return 'outro'
-                }
+            //AND, OR, NOT
+            // &&, ||, !== ou !===
+            var sexo = "M", idade = 24;
+            if(sexo === 'M' && idade >= 18){
+                console.log("ok!")
             }
-            //switchcase
-            /*
-            function retornaSexo(sexo){
-                switch(sexo){
-                    case 'M':
-                        return 'Masculino';
-                    case 'F':
-                        return 'Feminino';
-                    default:
-                        return 'outro'
-                }
-            }
-            */
-            var resultado = retornaSexo("M");
-            console.log(resultado);
+
+            var masculino = (sexo === "M")
+            console.log(masculino)
         </script>
     </body>
 </html>
