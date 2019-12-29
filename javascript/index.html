@@ -6,18 +6,12 @@
     <body>
         <script>
             //javascript
-            //AND, OR, NOT
-            // &&, ||, !== ou !===
-            var sexo = "M";
-            /*if(sexo === 'M' ){
-                console.log("MASCULINO")
+            function exibeAlgo(){
+                console.log('Hello Word!')
             }
-            else{
-                console.log()
-            }*/
-            //OPERADOR TERNÁRIO
-            var masculino = (sexo === "M")? "MASCULINO" : "FEMININO"
-            console.log(masculino)
+            //executa a função passada a cada 1s setInterval(exibeAlgo, 1000)
+            // aguada 5s e executa a função passada uma única vez setTimeout(exibeAlgo, 5000)
+            setTimeout(exibeAlgo, 5000)
         </script>
     </body>
 </html>
