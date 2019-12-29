@@ -7,21 +7,18 @@
     </head>
     <body>
         <div id='app'>
-            <input type="text" name="nome" id="nome" class="nome"/>
-            <input type="text" name="nome2" id="nome" class="nome"/>
+            <input type="text" name="nome" />
             <button class="botao">Adicionar</button >
         </div>
         <script>
-            //javascript
-            //busacando elementos na DOM(Document Object Model)
-            // pegar por id var inputElement = document.getElementById('nome');
-            // pega lista de tag do tipo informado var inputElement = document.getElementsByTagName('input');
-            // pega lista de tag com class informado var inputElement = document.getElementsByClassName('nome');
-            //querySelector e querySelectorAll são utilizados para navegar pela dom
-            var inputElement = document.querySelector("body div#app input");
-            console.log(inputElement);
-            inputElement = document.querySelectorAll("input");
-            console.log(inputElement);
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement = document.querySelector("button.botao");
+            
+            btnElement.onclick = function(){
+                var text = inputElement.value;
+                alert(text);
+            }
+        
         </script>
     </body>
 </html>
