@@ -6,13 +6,13 @@
     <body>
         <script>
             //javascript
-            var x = 10, y = 5;
-            console.log(x,y);
-            var resultado = x + y;
-            console.log(resultado)
-            //x = x + 3;
-            x += 3 // +=, -=, *=, /=,
-            console.log(resultado)
+            function soma(numero1, numero2){
+                var resultado;
+                resultado = numero1 + numero2;
+                return resultado;
+            }
+            var resultado = soma(10,5);
+            console.log(resultado);
         </script>
     </body>
 </html>
