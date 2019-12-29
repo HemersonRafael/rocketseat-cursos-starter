@@ -7,22 +7,21 @@
     </head>
     <body>
         <div id='app'>
-            <button onclick="mostraAlerta()">Me pressione</button>
-            <button onmouseover="mostraSobre()">passe sobre mim</button>
-            <input onkeypress="mostraDigitou()"/>
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <input type="text" name="nome2" id="nome" class="nome"/>
+            <button class="botao">Adicionar</button >
         </div>
         <script>
             //javascript
-            function mostraAlerta(){
-                alert('botão foi clicado')
-            }
-            function mostraSobre(){
-                alert('você passou sobre botão')
-            }
-            function mostraDigitou(){
-                alert('você digitou!')
-            }
-            
+            //busacando elementos na DOM(Document Object Model)
+            // pegar por id var inputElement = document.getElementById('nome');
+            // pega lista de tag do tipo informado var inputElement = document.getElementsByTagName('input');
+            // pega lista de tag com class informado var inputElement = document.getElementsByClassName('nome');
+            //querySelector e querySelectorAll são utilizados para navegar pela dom
+            var inputElement = document.querySelector("body div#app input");
+            console.log(inputElement);
+            inputElement = document.querySelectorAll("input");
+            console.log(inputElement);
         </script>
     </body>
 </html>
