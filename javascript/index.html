@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title>Curso Javascript</title>
+        
     </head>
     <body>
+        <div id='app'>
+            <button onclick="mostraAlerta()">Me pressione</button>
+            <button onmouseover="mostraSobre()">passe sobre mim</button>
+            <input onkeypress="mostraDigitou()"/>
+        </div>
         <script>
             //javascript
-            function exibeAlgo(){
-                console.log('Hello Word!')
+            function mostraAlerta(){
+                alert('botão foi clicado')
             }
-            //executa a função passada a cada 1s setInterval(exibeAlgo, 1000)
-            // aguada 5s e executa a função passada uma única vez setTimeout(exibeAlgo, 5000)
-            setTimeout(exibeAlgo, 5000)
+            function mostraSobre(){
+                alert('você passou sobre botão')
+            }
+            function mostraDigitou(){
+                alert('você digitou!')
+            }
+            
         </script>
     </body>
 </html>
