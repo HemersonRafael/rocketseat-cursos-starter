@@ -7,14 +7,20 @@
     </head>
     <body>
         <div id='app'>
-            <div class="box"></div>
+            <ul>
+                <li>Fazer Café
+                    <a href="#">Excluir</a>
+                </li>
+                <li>EStudar Javascript
+                    <a href="#">Excluir</a>
+                </li>
+                <li>Acessar comunidade da rocketseat
+                    <a href="#">Excluir</a>
+                </li>
+            </ul>
+            <input type="text" placeholder="Digite um todo">
+            <button>Adicionar</button>
         </div>
-        <script>
-            var boxElement = document.querySelector('.box');
-
-            boxElement.style.width = '100px';
-            boxElement.style.height = '100px';
-            boxElement.style.backgroundColor = '#f00';
-        </script>
+        <script src='todos.js'></script>
     </body>
 </html>
