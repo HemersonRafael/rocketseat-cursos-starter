@@ -1,20 +1,25 @@
-var checaIdade = function(idade){
-    return new Promise(function(resolve, reject){
-        if(idade > 18){
-            resolve()
-        }else{
-            reject()
-        }
+var inputElement = document.querySelector('input[name=user]');
+var buttonElement = document.querySelector('button.botao');
+var ulElement = document.querySelector('ul[name=list]');
 
+
+function getRepos(){
+    var user = inputElement.value;
+    axios.get("https://api.github.com/users/"+ user + "/repos")
+    .then(function(response){
+        for(var i = 0; i < response.data.length; i++){
+            var name = response.data[i].name;
+            //console.log(name)
+            var liElement = document.createElement('li');
+            var liText = document.createTextNode(name);
+            liElement.appendChild(liText);
+            ulElement.appendChild(liElement);
+        }
+    })
+    .catch(function(error){
+        console.warn(error)
     });
 }
 
-//var resultado = minhaPromise();
-//console.log(resultado) pedding
-checaIdade(20)
- .then(function() {
- console.log("Maior que 18");
- })
- .catch(function() {
- console.log("Menor que 18");
- });
+buttonElement.onclick= getRepos;
+
