@@ -17,3 +17,11 @@ var find = arr.find(function (item) {
   return item === 4;
 });
 console.log(find);
+
+var teste = function teste() {
+  return {
+    nome: 'Hemerson'
+  };
+};
+
+console.log(teste());
