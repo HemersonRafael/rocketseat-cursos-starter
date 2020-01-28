@@ -1,27 +1,24 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 9];
-var newArr = arr.map(function (item, index) {
-  return item + index;
-});
-console.log(newArr);
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum);
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(filter);
-var find = arr.find(function (item) {
-  return item === 4;
-});
-console.log(find);
-
-var teste = function teste() {
-  return {
-    nome: 'Hemerson'
-  };
+var usuario = {
+  nome: 'Hemerson',
+  idade: 24,
+  endereco: {
+    cidade: "Natal",
+    estado: "RN"
+  }
 };
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
 
-console.log(teste());
+function mostrar(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostrar(usuario);
